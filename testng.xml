@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG 项目报告">
+    <test name="第一组测试">
+        <classes>
+            <class name="com.hdp.DemoTest"></class>
+        </classes>
+    </test> <!-- Test -->
+<!--    <test name="第二组测试">
+        <classes>
+            <class name="Demo.test.demoTestng.demo02Test"></class>
+        </classes>
+    </test>
+    <test name="第三组测试">
+        <classes>
+            <class name="Demo.test.demoTestng.demo03Test"></class>
+        </classes>
+    </test>-->
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+    </listeners>
+</suite> <!-- Suite -->
