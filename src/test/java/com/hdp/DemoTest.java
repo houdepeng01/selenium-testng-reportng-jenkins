@@ -25,8 +25,10 @@ public class DemoTest {
         driver.get("http://choice-scm.tst.choicesoft.com.cn");
         System.out.println("The testing page title is: " + driver.getTitle());
     }
+
     @Test(priority = 3)
     public  void finish() throws InterruptedException {
+    	System.out.println("333333");
         Thread.sleep(5000);
         driver.quit();
 
