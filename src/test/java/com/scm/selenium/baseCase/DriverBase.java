@@ -7,7 +7,7 @@
 * @date 2018年3月14日
 * @version 1.0.1
 */
-package com.scm.selenium.base;
+package com.scm.selenium.baseCase;
 
 import org.openqa.selenium.WebDriver;
 
@@ -18,8 +18,18 @@ import org.openqa.selenium.WebDriver;
  */
 public class DriverBase {
 	public WebDriver driver;
-	public DriverBase(){
+	public DriverBase(String browser){
 		SelectDriver selectDriver = new SelectDriver();
+		this.driver =selectDriver.browserName(browser);
+	}
+	/*
+	 * 获取driver
+	 */
+	public WebDriver getDriver(){
+		return driver;
+	}
+	public void close(){
+		System.out.println("stop webdriver");
 	}
 	
 

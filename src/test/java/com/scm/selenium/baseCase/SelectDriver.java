@@ -7,7 +7,7 @@
 * @date 2018年3月14日
 * @version 1.0.1
 */
-package com.scm.selenium.base;
+package com.scm.selenium.baseCase;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -28,8 +28,7 @@ public class SelectDriver {
 			System.setProperty("webdriver.firefox.marionette", "D:\\java\\geckodriver\\geckodriver-v0.14.0-win64\\geckodriver.exe");
 			return new FirefoxDriver();
 		}
-		
-		
+		 		
 		
 	}
 
