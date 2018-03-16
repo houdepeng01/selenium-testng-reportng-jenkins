@@ -7,7 +7,7 @@
 * @date 2018年3月14日
 * @version 1.0.1
 */
-package com.scm.selenium.baseCase;
+package com.scm.selenium.model.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
