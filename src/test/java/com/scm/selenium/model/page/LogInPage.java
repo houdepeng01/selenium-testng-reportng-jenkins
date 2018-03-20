@@ -31,7 +31,6 @@ public class LogInPage extends BasePage {
 	 * 获取用户名输入框
 	 */
 	public WebElement getUserElement() {
-		//System.out.println(GetByLocator.getLocator("userName"));
 		return webElement(GetByLocator.getLocator("userName"));
 	}
 

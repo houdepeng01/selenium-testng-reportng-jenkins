@@ -17,13 +17,12 @@ import org.openqa.selenium.By;
  */
 public class GetByLocator {
 	public static By getLocator(String key) {
-		System.out.println("*****"+key+"****");
 		ProUtil pro = new ProUtil("element.properties");
 		String locator = pro.getPro(key);
 		String locatorType = locator.split(">")[0];
-		System.out.println(locatorType);
+		//System.out.println(locatorType);
 		String locatorValue = locator.split(">")[1];
-		System.out.println(locatorValue);
+		//System.out.println(locatorValue);
 		if (locatorType.equals("id")) {
 			return By.id(locatorValue);
 		} else if (locatorType.equals("name")) {
@@ -40,5 +39,4 @@ public class GetByLocator {
 			return By.xpath(locatorValue);
 		}
 	}
-
 }

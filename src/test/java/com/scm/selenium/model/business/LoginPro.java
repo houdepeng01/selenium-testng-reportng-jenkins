@@ -27,13 +27,13 @@ public class LoginPro {
 	}
 
 	public void login(String username, String password) {
-		/*if (lph.assertLoginPage()) {*/
+		if (lph.assertLoginPage()) {
 			lph.sendKeysUser(username);
 			lph.sendKeysPassword(password);
 			lph.clickLoginButton();
-		/*} else {
+		} else {
 			System.out.println("页面不存在或者状态不正确。");
-		}*/
+		}
 
 	}
 

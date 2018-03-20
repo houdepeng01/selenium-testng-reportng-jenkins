@@ -36,8 +36,14 @@ public class LogIn {
 		this.driver= InitDriver.initDriver("chrome");
 		pro = new ProUtil("loginTest.properties");
 		driver.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.driver.manage().window().maximize();
 		loginPro = new LoginPro(driver);
-		driver.driver.get(pro.getPro("url"));
+		driver.get(pro.getPro("url"));
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 	@Test
 	public void testLogin(){
@@ -47,14 +53,18 @@ public class LogIn {
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-/*	@AfterClass
+	@AfterClass
 	public void afterClass(){
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		driver.close();
 	}
-*/
+
 
 }

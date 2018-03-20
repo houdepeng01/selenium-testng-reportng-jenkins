@@ -23,6 +23,7 @@ public class LogInPageHandle {
 
 	public LogInPageHandle(DriverBase driver) {
 		this.driver = driver;
+		lp = new LogInPage(driver);
 	}
 
 	/**
@@ -56,7 +57,8 @@ public class LogInPageHandle {
 	/**
 	 * 判断是否是登陆页面
 	 */
-/*	public boolean assertLoginPage() {
-		return lp.assertElementIsDisplay(lp.getUserElement());
-	}*/
+	public boolean assertLoginPage() {
+	 return lp.assertElementIs(lp.getUserElement());
+	}
+
 }

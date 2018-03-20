@@ -22,7 +22,8 @@ import com.scm.selenium.model.base.DriverBase;
  * 
  */
 public class BasePage {
-	public DriverBase driver;
+
+	public  DriverBase driver;
 
 	public BasePage(DriverBase driver) {
 		this.driver = driver;
@@ -31,7 +32,7 @@ public class BasePage {
 	/**
 	 * 定位Element
 	 */
-	public WebElement webElement(By by) {
+	public  WebElement webElement(By by) {
 		WebElement webElement = driver.findElement(by);
 		return webElement;
 	}
@@ -50,6 +51,12 @@ public class BasePage {
 	public WebElement nodeElement(WebElement element, By by) {
 		return element.findElement(by);
 
+	}
+	/**
+	 * 判断元素是否显示
+	 * */
+	public boolean assertElementIs(WebElement element){
+		return element.isDisplayed();
 	}
 
 	/**
