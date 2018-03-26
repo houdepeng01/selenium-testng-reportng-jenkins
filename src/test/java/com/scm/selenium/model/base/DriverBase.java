@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -124,6 +125,13 @@ public class DriverBase {
 	public void action(WebElement element) {
 		Actions action = new Actions(driver);
 		action.moveToElement(element).perform();
+	}
+
+	/**
+	 * 设置cookies
+	 */	
+	public void setCookie(Cookie cookie) {
+		driver.manage().addCookie(cookie);   
 	}
 
 }
