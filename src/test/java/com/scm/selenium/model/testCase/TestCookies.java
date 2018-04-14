@@ -28,10 +28,10 @@ public class TestCookies {
 	public void beforeClass() throws Exception{
 		this.driver = InitDriver.initDriver("chrome");
 		handleCookie = new CookiesUtils(driver);
-		driver.get("http://scmqas.choicesaas.cn/settled.html#/merchants/merchantsInfo?_k=egmr2p");
+		driver.get("http://scm.pre.choicesaas.cn/inventory.html#/stock/requisition?_k=15rqbv");
 		handleCookie.setCookie();
 		Thread.sleep(3000);
-		driver.get("http://scmqas.choicesaas.cn/settled.html#/merchants/merchantsInfo?_k=egmr2p");
+		driver.get("http://scm.pre.choicesaas.cn/inventory.html#/stock/requisition?_k=15rqbv");
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {

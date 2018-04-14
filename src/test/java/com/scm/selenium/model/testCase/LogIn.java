@@ -69,11 +69,6 @@ public class LogIn {
 	public  void testProgress() throws InterruptedException {
 		ZYProcess zy = new ZYProcess(driver);
 		zy.zyOrder();
-
-		//driver.driver.findElement(By.className("ant-select-selection-rendered")).click();
-		//driver.driver.findElement(By.className("ant-select-selection-selected-value")).click();
-
-
 	}
 	@AfterClass
 	public void afterClass(){
