@@ -11,6 +11,7 @@ package com.scm.selenium.model.testCase;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -31,6 +32,7 @@ public class LogIn {
 	public InitDriver initDriver;
 	public ProUtil  pro;
 	public LoginPro loginPro;
+
 	@BeforeClass
 	public void beforeClass(){
 		this.driver= InitDriver.initDriver("chrome");
@@ -45,7 +47,10 @@ public class LogIn {
 			e.printStackTrace();
 		}
 	}
-	@Test
+	@Test(priority = 0)
+	/**
+	 * 登录
+	 */
 	public void testLogin(){
 		String username = pro.getPro("username");
 		String password = pro.getPro("password");
@@ -55,6 +60,20 @@ public class LogIn {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+	}
+	@Test(priority = 1)
+	/***
+	 *
+	 * 生成直运订单
+	 */
+	public  void testProgress() throws InterruptedException {
+		ZYProcess zy = new ZYProcess(driver);
+		zy.zyOrder();
+
+		//driver.driver.findElement(By.className("ant-select-selection-rendered")).click();
+		//driver.driver.findElement(By.className("ant-select-selection-selected-value")).click();
+
+
 	}
 	@AfterClass
 	public void afterClass(){
