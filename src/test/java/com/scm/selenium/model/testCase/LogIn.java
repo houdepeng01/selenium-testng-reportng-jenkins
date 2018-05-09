@@ -11,7 +11,7 @@ package com.scm.selenium.model.testCase;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -61,14 +61,20 @@ public class LogIn {
 			e.printStackTrace();
 		}
 	}
-	@Test(priority = 1)
 	/***
 	 *
 	 * 生成直运订单
 	 */
+	@Test(priority = 1)
 	public  void testProgress() throws InterruptedException {
 		ZYProcess zy = new ZYProcess(driver);
 		zy.zyOrder();
+	}
+	@Test(priority = 2)
+	public void testOrderCenterPro() throws InterruptedException {
+		OrderCenterPro ocp = new OrderCenterPro(driver);
+		ocp.checkOrder();
+
 	}
 	@AfterClass
 	public void afterClass(){

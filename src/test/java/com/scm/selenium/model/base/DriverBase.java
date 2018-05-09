@@ -124,7 +124,14 @@ public class DriverBase {
 	 */
 	public void action(WebElement element) {
 		Actions action = new Actions(driver);
-		action.moveToElement(element).perform();
+		action.moveToElement(element).click().perform();
+	}
+	/**
+	 * actionMoveElement input
+	 */
+	public void action(WebElement element,String s) {
+		Actions action = new Actions(driver);
+		action.moveToElement(element).click().sendKeys(s).perform();
 	}
 
 	/**

@@ -20,14 +20,12 @@ public class GetByLocator {
 		ProUtil pro = new ProUtil("element.properties");
 		String locator = pro.getPro(key);
 		String locatorType = locator.split(">")[0];
-		//System.out.println(locatorType);
 		String locatorValue = locator.split(">")[1];
-		//System.out.println(locatorValue);
 		if (locatorType.equals("id")) {
 			return By.id(locatorValue);
 		} else if (locatorType.equals("name")) {
 			return By.name(locatorValue);
-		} else if (locatorType.equals("tageName")) {
+		} else if (locatorType.equals("tagName")) {
 			return By.tagName(locatorValue);
 		} else if (locatorType.equals("linkText")) {
 			return By.linkText(locatorValue);

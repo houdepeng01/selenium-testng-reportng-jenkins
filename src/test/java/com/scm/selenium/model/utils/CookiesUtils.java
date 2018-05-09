@@ -29,7 +29,7 @@ public class CookiesUtils {
 	}
 	public void setCookie(){
 		String value = proUtil.getPro("JSESSIONID");
-		Cookie cookie = new Cookie("JSESSIONID",value,"scmqas.choicesaas.cn","/ipos-chains",null);
+		Cookie cookie = new Cookie("JSESSIONID",value,"scm.pre.choicesaas.cn","/ipos-chains",null);
 		driver.setCookie(cookie);
 	}
 
