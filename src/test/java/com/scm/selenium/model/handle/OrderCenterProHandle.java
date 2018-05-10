@@ -2,6 +2,7 @@ package com.scm.selenium.model.handle;
 
 import com.scm.selenium.model.base.DriverBase;
 import com.scm.selenium.model.page.OrderCenterProPage;
+import com.scm.selenium.model.utils.ProUtil;
 import org.openqa.selenium.WebElement;
 
 /**
@@ -10,6 +11,7 @@ import org.openqa.selenium.WebElement;
 public class OrderCenterProHandle {
     public DriverBase driver;
     public OrderCenterProPage ocpp;
+    public ProUtil pro;
     public OrderCenterProHandle(DriverBase driver){
         this.driver = driver;
         ocpp = new OrderCenterProPage(driver);

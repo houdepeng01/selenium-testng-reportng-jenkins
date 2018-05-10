@@ -32,7 +32,6 @@ public class LogIn {
 	public InitDriver initDriver;
 	public ProUtil  pro;
 	public LoginPro loginPro;
-
 	@BeforeClass
 	public void beforeClass(){
 		this.driver= InitDriver.initDriver("chrome");
@@ -47,19 +46,18 @@ public class LogIn {
 			e.printStackTrace();
 		}
 	}
-	@Test(priority = 0)
 	/**
-	 * 登录
+	 * 登录 跳转到供应链模块
 	 */
-	public void testLogin(){
+    @Test(priority = 0)
+	public void testLogin() throws InterruptedException {
 		String username = pro.getPro("username");
 		String password = pro.getPro("password");
 		loginPro.login(username, password);
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		Thread.sleep(5000);
+        pro = new ProUtil("scmUrl.properties");
+        driver.get(pro.getPro("scmUrl"));
+        Thread.sleep(2000);
 	}
 	/***
 	 *

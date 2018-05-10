@@ -25,8 +25,6 @@ public class ZYProcess {
      */
     public void zyOrder() throws InterruptedException {
         pro = new ProUtil("scmUrl.properties");
-        driver.get(pro.getPro("scmUrl"));
-        Thread.sleep(2000);
         driver.get(pro.getPro("stockRequisitionUrl"));
         Thread.sleep(2000);
         zyph.closeTableWindow().click();
@@ -58,6 +56,7 @@ public class ZYProcess {
         driver.action(zyph.getSelectData());
         Thread.sleep(2000);
         zyph.getClickButtonBuy().click();
+        Thread.sleep(2000);
 
     }
 
